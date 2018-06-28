@@ -14,38 +14,48 @@ var app = function() {
 
 
 
-
     $().ready (function (){
       $('#nav-home').click (function (event){
         event.preventDefault();
         var goTop = $('#home').offset().top;
         $("html, body").scrollTop(goTop);
       });
-
-      $('#nav-edu').click(function (event){
+      $('#nav-portfolio').click(function (event){
          event.preventDefault();
-        var goTop = $('#education').offset().top;
-        $("html, body").animate({
-          scrollTop: goTop
-        }, 500);
-      });
-
-      $('#nav-exp').click(function (event){
-        event.preventDefault();
-        var goTop = $('#experience').offset().top;
-        $("html, body").animate({
-          scrollTop: goTop
-        }, 500);
-      });
-
-      $('#nav-contact').click(function (event){
-        event.preventDefault();
-        var goTop = $('#contact').offset().top;
+        var goTop = $('#portfolio').offset().top;
         $("html, body").animate({
           scrollTop: goTop
         }, 500);
       });
     });
+
+    self.go_home = function(){
+      if(!self.vue.home){
+      console.log('home');
+      self.vue.home = !self.vue.home;
+      self.vue.services = false;
+      self.vue.contact = false;
+      }
+    }
+
+    self.go_services = function(){
+      if(!self.vue.services){
+      console.log('services');
+      self.vue.services = !self.vue.services;
+      self.vue.home = false;
+      self.vue.contact = false;
+      }
+    }
+
+    self.go_contact = function(){
+      if(!self.vue.contact){
+      console.log('contact');
+      self.vue.contact = !self.vue.contact;
+      self.vue.services = false;
+      self.vue.home = false;
+      }
+    }
+
 
 
     self.vue = new Vue({
@@ -53,12 +63,19 @@ var app = function() {
         delimiters: ['${', '}'],
         unsafeDelimiters: ['!{', '}'],
         data: {
-            users: [],
-            logged_in: false,
             name: null,
+            email: null,
+            info: null,
+            home: true,
+            portfolio: true,
+            services: false,
+            contact: false,
         },
         methods: {
           add_user: self.add_user,
+          go_home: self.go_home,
+          go_services: self.go_services,
+          go_contact: self.go_contact,
         }
 
     });

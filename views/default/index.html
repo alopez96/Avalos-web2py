@@ -7,6 +7,7 @@
 <link rel="stylesheet" media="all" href="https://blackrockdigital.github.io/startbootstrap-grayscale/css/grayscale.css" />
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Courgette|Playfair+Display|Satisfy" rel="stylesheet">
 
 <script>
   // var sign_up_user_url = "{{=URL('api', 'sign_up_user')}}";
@@ -16,7 +17,93 @@
 
 <div class="main_content">
   <div id="vue-div" class="display:none">
-tello 
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a id="nav-home" class="nav-item nav-link active" href="#home" v-on:click="go_home()">Home</a>
+          <a id="nav-portfolio" class="nav-item nav-link active" href="#portfolio" v-on:click="go_home()">Portfolio</a>
+          <a id="nav-services" class="nav-item nav-link active" v-on:click="go_services()">Services</a>
+          <a id="nav-contact" class="nav-item nav-link active" href="#contact" v-on:click="go_services()">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="home_and_portfolio">
+      <div class="container padded" v-if="home">
+        <section id="home">
+        <div class="home">
+          Color Consultant and Make Up Artist
+          <!-- <div class="container">
+            <img src="https://images.evisos.com.mx/2010/01/07/maquillista-profesional_cc17fc9f5_3.jpg" alt="" style="width:60%;">
+            <div class="bottom-left"></div>
+            <div class="top-left"><h2>Passionate</h2></div>
+            <div class="top-right"><h2>Creative</h2></div>
+            <div class="bottom-right"></div>
+            <div class="centered">Gina Avalos</div>
+          </div> -->
+          <br />
+          <div class="container black">
+            <div class="quarter">
+              <div class="padded">
+                  <a href="" class="fa fa-snapchat fa-lg"></a>
+                  <a href=" https://twitter.com/avalossg" class="fa fa-twitter fa-lg"></a>
+                  <a href="https://www.instagram.com/avalossg" class="fa fa-instagram fa-lg"></a>
+                  <a href=" https://www.youtube.com/channel/UCc3WF5kx31LHJcsMcAmYFvQ?view_as=subscriber" class="fa fa-youtube fa-lg"></a>
+              </div>
+            </div>
+              <div class="threequarters white">
+                <div class="padded">
+                  hustle hard, believe in yourself, and stay humble
+                </div>
+              </div>
+            </div>
+
+
+          <div class="">
+            <h3>Hi, I am Gina Avalos, and I am a Make Up Artist with 5 years of experience as a Sephora Color Consultant,
+            and I am also CM and Lash Application Certified.
+            I have also been doing this for more than 10 years and the service I provide is great.
+            I specialize in Promp, and Weedings, also Quinceneras and soccer events #NoEraPenal.
+            </h3>
+          </div>
+        </div>
+      </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio container content-section text-center">
+        <div class="row">
+            <h2>portfolio</h2>
+            this will be the list of images you want
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <div class="services_and_contact container" v-if="services">
+    <section id="services">
+        services page
+        <div class="container">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn3ixKu_UMPnT_t6Qm06jm4RJLZCxARv1BoIB57qBZR0Ag1iCUqA" alt="" >
+          <div class="bottom-left">Lashes and Face: $55</div>
+          <div class="top-left">Lashes: $45</div>
+          <div class="top-right">Smile: $5</div>
+          <div class="bottom-right"></div>
+          <div class="centered"></div>
+      </div>
+    </section>
+
+    <section id="contact" class="container content-section text-center">
+      this is contact page
+
+    </section>
+
+  </div>
+
 
 </div>
 </div>
