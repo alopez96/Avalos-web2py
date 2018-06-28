@@ -15,14 +15,23 @@ var app = function() {
 
 
     $().ready (function (){
-      $('#nav-home').click (function (event){
-        event.preventDefault();
-        var goTop = $('#home').offset().top;
-        $("html, body").scrollTop(goTop);
+      $('#nav-about').click(function (event){
+         event.preventDefault();
+        var goTop = $('#about').offset().top;
+        $("html, body").animate({
+          scrollTop: goTop
+        }, 500);
       });
       $('#nav-portfolio').click(function (event){
          event.preventDefault();
         var goTop = $('#portfolio').offset().top;
+        $("html, body").animate({
+          scrollTop: goTop
+        }, 500);
+      });
+      $('#nav-contact').click(function (event){
+         event.preventDefault();
+        var goTop = $('#contact').offset().top;
         $("html, body").animate({
           scrollTop: goTop
         }, 500);
@@ -56,6 +65,18 @@ var app = function() {
       }
     }
 
+    self.send_message = function(){
+      console.log('send_email');
+      $.post(send_msg_url,{
+         subject: self.vue.subject,
+         message: self.vue.message,
+      },function(data){
+        if(data.success){
+          console.log('message sent');
+        }
+      })
+    }
+
 
 
     self.vue = new Vue({
@@ -70,12 +91,15 @@ var app = function() {
             portfolio: true,
             services: false,
             contact: false,
+            subject: "",
+            message: "",
         },
         methods: {
           add_user: self.add_user,
           go_home: self.go_home,
           go_services: self.go_services,
           go_contact: self.go_contact,
+          send_message: self.send_message,
         }
 
     });

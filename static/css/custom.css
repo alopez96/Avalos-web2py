@@ -23,17 +23,44 @@ a:not(.btn):not(.noeffect):after {background-color:#26a69a}
   font-weight: 400;
 }
 
+.home_header{
+  text-shadow: 2px 2px #ffc3e1;
+}
+
+.home_and_portfolio h4{
+  font-family: 'Patua One', cursive;
+}
+
 .home_and_portfolio h3{
-  font-family: 'Playfair Display', serif;
-  font-size: 25px;
+  font-family: 'Noto Serif', serif;
+  font-size: 20px;
   font-weight: 500;
+  line-height: 150%;
 }
 
 .services_and_contact{
   font-family: 'Playfair Display', serif;
   font-size: 60px;
   font-weight: 400;
-  /* background-image: url("https://png.pngtree.com/thumb_back/fw800/back_pic/00/12/41/97563ca5f763a49.jpg"); */
+  background-image:
+     linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("https://cmkt-image-prd.global.ssl.fastly.net/0.1.0/ps/2152557/1360/907/m1/fpnw/wm1/swgh4yroqcpmmsdn6agpnyygvrxxjyf5vdddsp9cj1dush4zt98e3dxmydruevil-.jpg?1484817696&s=cd066c7a55fe53f13f0fe1c6f586b1c0");
+    color: white;
+}
+
+.services_and_contact h1{
+  font-size: 60px;
+  font-weight: 200;
+  text-shadow: 1px 1px #ffc3e1;
+}
+
+.services_and_contact h3{
+  font-size: 40px;
+  font-weight: 500;
+  font-family: 'Noto Serif', serif;
 }
 
 .contact{
@@ -79,7 +106,7 @@ a:not(.btn):not(.noeffect):after {background-color:#26a69a}
 /* Centered text */
 .centered {
     position: absolute;
-    top: 50%;
+    top: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -87,4 +114,80 @@ a:not(.btn):not(.noeffect):after {background-color:#26a69a}
 .text_in_image{
    font-weight: bold;
    color: red;
+}
+
+.social_box{
+  color: black;
+   background: radial-gradient(rgba(255,0,0,0) 20%, rgb(255,192,203) 60%);
+   /* background: linear-gradient(to bottom right, red, yellow); */
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border-radius: 3px;
+}
+
+.social_links a{
+  color:black;
+  font-size: 60px;
+  font-weight: 500;
+  line-height: 100%;
+  padding: 30px;
+}
+
+.threequarters{
+  outline-style: solid;
+  margin:10px;
+  outline-color: white;
+}
+
+.threequarters h4{
+  color:black;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.padded h4{
+  margin-top: 20px;
+}
+
+.portfolio_images{
+  line-height: 12px;
+}
+
+.portfolio_images img{
+  margin:auto;
+  width:20%;
+  padding: 5px;
+  border-style: inset;
+  border-width: 5px;
+   border-radius: 2px;
+}
+
+.image_set1 img{
+  height:50%;
+}
+
+.image_set2 img{
+  height:35%;
+}
+
+
+.pink_button{
+  background-color: #cc5490;
+  color: white;
+}
+.pink_button:hover{
+  color: black;
+}
+
+
+.about{
+  padding:30px;
+  padding-left:100px;
+  padding-right:100px;
+}
+
+.about h3{
+  line-height: 180%;
 }
