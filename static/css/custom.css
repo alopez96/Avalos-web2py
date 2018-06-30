@@ -151,6 +151,15 @@ a:not(.btn):not(.noeffect):after {background-color:#26a69a}
   margin-top: 20px;
 }
 
+.self_image{
+  height:50%;
+  margin:auto;
+  padding: 5px;
+  border-style: outset;
+  border-width: 5px;
+   border-radius: 2px;
+}
+
 .portfolio_images{
   line-height: 12px;
 }
@@ -165,7 +174,7 @@ a:not(.btn):not(.noeffect):after {background-color:#26a69a}
 }
 
 .image_set1 img{
-  height:50%;
+  height:46%;
 }
 
 .image_set2 img{
