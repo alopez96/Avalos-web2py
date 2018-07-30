@@ -7,15 +7,6 @@ a:not(.btn):not(.noeffect):after {background-color:#26a69a}
 .tags > span {background-color: #26a69a}
 .tags.dismissible > span.off:hover {background-color:#26a69a}
 
-.main_content{
-  /* background-repeat: repeat; */
-  /* background-color: #FDDDEC; */
-  /* background-color: #C2DFE3; */
-  /* background-color: #9DB4C0; */
-  /* background-color: #5C6B73; */
-  /* background-color: #253237; */
-  /* color: white; */
-}
 
 .home_and_portfolio{
   font-family: 'Courgette', cursive;
@@ -92,8 +83,8 @@ a:not(.btn):not(.noeffect):after {background-color:#26a69a}
 /* Top right text */
 .top-right {
     position: absolute;
-    top: 8px;
-    right: 16px;
+    top: 5%;
+    right: 2%;
 }
 
 /* Bottom right text */
@@ -166,15 +157,15 @@ a:not(.btn):not(.noeffect):after {background-color:#26a69a}
 
 .portfolio_images img{
   margin:auto;
-  width:20%;
-  padding: 5px;
+  width:auto;
+  padding: 1%;
   border-style: inset;
   border-width: 5px;
    border-radius: 2px;
 }
 
 .image_set1 img{
-  height:46%;
+  height:52%;
 }
 
 .image_set2 img{
@@ -183,7 +174,7 @@ a:not(.btn):not(.noeffect):after {background-color:#26a69a}
 
 
 .pink_button{
-  background-color: #cc5490;
+  background-color: #f67cb9;
   color: white;
 }
 .pink_button:hover{
@@ -192,11 +183,16 @@ a:not(.btn):not(.noeffect):after {background-color:#26a69a}
 
 
 .about{
-  padding:30px;
-  padding-left:100px;
-  padding-right:100px;
+  padding:5%;
+  padding-left:10%;
+  padding-right:10%;
 }
 
 .about h3{
   line-height: 180%;
+}
+
+
+.form-text{
+  font-size:15px;
 }

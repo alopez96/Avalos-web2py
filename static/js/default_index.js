@@ -16,21 +16,21 @@ var app = function() {
 
     $().ready (function (){
       $('#nav-about').click(function (event){
-         event.preventDefault();
+         // event.preventDefault();
         var goTop = $('#about').offset().top;
         $("html, body").animate({
           scrollTop: goTop
         }, 500);
       });
       $('#nav-portfolio').click(function (event){
-         event.preventDefault();
+         // event.preventDefault();
         var goTop = $('#portfolio').offset().top;
         $("html, body").animate({
           scrollTop: goTop
         }, 500);
       });
       $('#nav-contact').click(function (event){
-         event.preventDefault();
+         // event.preventDefault();
         var goTop = $('#contact').offset().top;
         $("html, body").animate({
           scrollTop: goTop

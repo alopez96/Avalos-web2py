@@ -4,8 +4,10 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="{{=URL('static', 'js/vue.js')}}"></script>
 
+
 <link rel="stylesheet" media="all" href="https://blackrockdigital.github.io/startbootstrap-grayscale/css/grayscale.css" />
 <link href="https://fonts.googleapis.com/css?family=Courgette|Noto+Serif|Patua+One|Playfair+Display|Satisfy" rel="stylesheet">
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 
 <script>
   var send_msg_url = "{{=URL('api', 'send_msg')}}";
@@ -48,7 +50,8 @@
             <img src="https://img.clipartxtras.com/305146baa00e02c7c135227f52f798e8_scscipio05-pinterest-tumblr-outlines-and-eye-drawings-eyelashes-drawing-tumblr_536-750.jpeg" alt="" >
             <div class="bottom-left"></div>
             <div class="top-left"></div>
-            <div class="top-right"></div>
+            <div class="top-right">
+            <button type="button" class="btn pink_button" href="#contact" v-on:click="go_services()">Book Now</button></div>
             <div class="bottom-right"></div>
             <div class="centered">Gina Avalos</div>
           </div>
@@ -59,7 +62,7 @@
               I am also a Color Consultant at Sephora where I CM Certified and Lash
               Application Certified. I have been at Sephora for 4 years and have 8
               years of Freelance experience. I am currently located in Sacramento, Ca.
-               I specialize Weddings, Prom, Quinceaneras and any special events.
+               I specialize in Weddings, Prom, Quince&#xF1;eras and any special events.
                If you are interested in booking with me, send me a message!
             </h3>
           </div>
@@ -73,12 +76,14 @@
               </div>
             </div>
         </div>
+        <br />
       </section>
 
     <!-- Portfolio Section -->
     <section class="portfolio container content-section">
+      <br />
         <div class="" id="portfolio">
-            <h2 class="text-center">portfolio</h2>
+            <h1 class="text-center">Portfolio</h1>
             <div class="portfolio_images">
               <div class="container">
                 <div class="image_set2">
@@ -110,19 +115,22 @@
               </div>
             </div>
             </div>
+            <br />
+
       </section>
     </div>
 
 
   <div class="services_and_contact text-center" v-if="services">
     <section id="services">
+      <br />
       <h1>Free Lance Make Up Artist</h1>
       <br />
         <div class="">
           <h3>Full Face: $45</h3>
-          <br />
           <h3>Full Face and Lashes: $55</h3>
         </div>
+        <br />
     </section>
 
     <section>
@@ -131,7 +139,7 @@
         <input v-model="subject" class="form-control" type="text" placeholder="Subject">
         <p class="form-text">Please include name in subject</p>
         <input v-model="message" class="form-control" type="text" placeholder="Message">
-        <p class="form-text">Please include contact info and job description of job in message</p>
+        <p class="form-text">Please include contact info and job description in message</p>
         <button type="button" name="button" class="btn pink_button btn-lg" v-on:click="send_message()">send</button>
       </div>
 

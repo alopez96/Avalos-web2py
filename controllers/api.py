@@ -1,10 +1,10 @@
 import smtplib
 
 
-EMAIL_ADDRESS=""
-PASSWORD=""
-subject=""
-msg=""
+EMAIL_ADDRESS="arturowebemail@gmail.com"
+PASSWORD="websitepage2"
+subject="test123"
+msg="hello world"
 
 def send_email(subject, msg):
     try:
